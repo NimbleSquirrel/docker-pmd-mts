@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+#-----get file from user and unzip
+wget $my_repository
+unzip *.zip
+rm *.zip
+
+/opt/bin/pmd/bin/run.sh pmd "$@"
